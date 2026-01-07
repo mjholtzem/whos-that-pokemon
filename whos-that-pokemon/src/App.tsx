@@ -88,10 +88,10 @@ function App() {
 
   return (
     <>
-      <div className="p-10 h-full bg-gray-300 flex flex-col justify-center">
+      <div className="p-10 h-full bg-gray-300 flex flex-col justify-center items-center">
         <div
           key="card"
-          className="h-full flex flex-col justify-center bg-white items-stretch gap-2 rounded-2xl shadow-2xl p-5"
+          className="h-full flex flex-col justify-center bg-white items-stretch gap-2 rounded-2xl shadow-2xl py-5 px-20"
         >
           <h1 className="font-black text-4xl text-center">
             Who's That Pokémon?
