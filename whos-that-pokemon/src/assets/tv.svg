@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="340"
+   height="225"
+   viewBox="0 0 340 225"
+   version="1.1"
+   id="svg50"
+   sodipodi:docname="tv.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview52"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="2.3966667"
+     inkscape:cx="170.02782"
+     inkscape:cy="19.819193"
+     inkscape:window-width="1920"
+     inkscape:window-height="1129"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg50" />
+  <!-- Shadow -->
+  <!-- TV body -->
+  <rect
+     x="0"
+     y="0"
+     width="340"
+     height="220"
+     rx="18"
+     fill="#c84a3a"
+     id="rect4"
+     style="fill:#ffdd55" />
+  <!-- Inner bezel -->
+  <rect
+     x="20"
+     y="20"
+     width="240"
+     height="170"
+     rx="14"
+     fill="#f2e6cf"
+     id="rect6"
+     style="fill:#2f2f2f;fill-opacity:1" />
+  <!-- Screen -->
+  <rect
+     id="tv-screen"
+     x="35"
+     y="35"
+     width="210"
+     height="140"
+     rx="10"
+     fill="#9fc5c1"
+     style="fill:#ffffff" />
+  <!-- Screen vignette -->
+  <!-- Control panel -->
+  <rect
+     x="270"
+     y="20"
+     width="50"
+     height="170"
+     rx="8"
+     fill="#2f2f2f"
+     id="rect11" />
+  <!-- Knob -->
+  <circle
+     cx="295"
+     cy="60"
+     r="16"
+     fill="#555555"
+     id="circle13" />
+  <circle
+     cx="295"
+     cy="60"
+     r="4"
+     fill="#222222"
+     id="circle15" />
+  <!-- Buttons -->
+  <rect
+     x="280"
+     y="100"
+     width="30"
+     height="8"
+     rx="4"
+     fill="#666666"
+     id="rect17" />
+  <rect
+     x="280"
+     y="115"
+     width="30"
+     height="8"
+     rx="4"
+     fill="#666666"
+     id="rect19" />
+  <!-- Speaker grille -->
+  <g
+     fill="#1e1e1e"
+     opacity="0.6"
+     id="g37"
+     transform="translate(-40,-30)">
+    <circle
+       cx="320"
+       cy="180"
+       r="2"
+       id="circle21" />
+    <circle
+       cx="330"
+       cy="180"
+       r="2"
+       id="circle23" />
+    <circle
+       cx="340"
+       cy="180"
+       r="2"
+       id="circle25" />
+    <circle
+       cx="350"
+       cy="180"
+       r="2"
+       id="circle27" />
+    <circle
+       cx="320"
+       cy="195"
+       r="2"
+       id="circle29" />
+    <circle
+       cx="330"
+       cy="195"
+       r="2"
+       id="circle31" />
+    <circle
+       cx="340"
+       cy="195"
+       r="2"
+       id="circle33" />
+    <circle
+       cx="350"
+       cy="195"
+       r="2"
+       id="circle35" />
+  </g>
+  <!-- Feet -->
+  <rect
+     x="50"
+     y="215"
+     width="60"
+     height="10"
+     rx="4"
+     fill="#2a2a2a"
+     id="rect39" />
+  <rect
+     x="230"
+     y="215"
+     width="60"
+     height="10"
+     rx="4"
+     fill="#2a2a2a"
+     id="rect41" />
+  <!-- Screen shading gradient -->
+  <defs
+     id="defs48">
+    <linearGradient
+       id="screenShade"
+       x1="0"
+       y1="0"
+       x2="0"
+       y2="1">
+      <stop
+         offset="0%"
+         stop-color="#ffffff"
+         id="stop43" />
+      <stop
+         offset="100%"
+         stop-color="#000000"
+         id="stop45" />
+    </linearGradient>
+  </defs>
+</svg>
