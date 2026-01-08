@@ -136,7 +136,7 @@ function App() {
 
   return (
     <>
-      <div className="pb-[calc(env(safe-area-inset-bottom)+20px)] p-10 h-full w-full bg-gray-300 flex flex-col justify-center items-center min-h-0 min-w-0">
+      <div className="pb-[calc(env(safe-area-inset-bottom)+20px)] p-10 w-full bg-gray-300 flex flex-col justify-center items-center min-h-0 min-w-0">
         <div
           key="card"
           className="flex flex-col justify-center bg-white items-stretch gap-2 rounded-2xl shadow-2xl p-5 lg:p-20"
