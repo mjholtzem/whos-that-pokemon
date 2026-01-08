@@ -8,7 +8,7 @@ function TvContainer({ children }: { children: ReactNode }) {
   return (
     <div className="relative inline-block">
       <img src={tvUrl} alt="TV Frame" className="block"></img>
-      <div className="bg-slate-500 rounded-lg overflow-hidden absolute align-left align-top w-[61.8%] h-[62.4%] top-[15.55%] left-[10.3%] @container">
+      <div className="bg-slate-500 rounded-[5%] overflow-hidden absolute align-left align-top w-[61.8%] h-[62.4%] top-[15.55%] left-[10.3%] @container">
         <CRTEffect preset={"minimal"}>
             <div className="w-[100cqw] h-[67cqw] flex justify-center items-center">
                 {children}
