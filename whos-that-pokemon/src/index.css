@@ -1,4 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+15&display=swap");
 @import "tailwindcss";
+@theme {
+  --font-jersey-15: "Jersey 15", sans-serif;
+}
+
 
 html, body {
   height: 100%;

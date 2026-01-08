@@ -33,16 +33,16 @@ function App() {
   };
 
   return (
-    <div className="pb-[calc(env(safe-area-inset-bottom)+20px)] p-10 h-full w-full bg-gray-300 flex flex-col justify-center items-center min-h-0 min-w-0">
+    <div className="font-jersey-15 pb-[calc(env(safe-area-inset-bottom)+20px)] p-10 h-full w-full bg-gray-300 flex flex-col justify-center items-center min-h-0 min-w-0">
       <div className="flex flex-col justify-center bg-white items-center gap-2 rounded-2xl shadow-2xl p-5 lg:p-10">
-        <h1 className="font-bold text-[min(6vw,4vh)] text-center leading-none">
+        <h1 className="font-roboto font-bold text-[min(6vw,4vh)] text-center leading-none">
           Who's That
         </h1>
-        <h1 className="font-black text-[min(8vw,6vh)] text-center leading-none pb-2">
+        <h1 className="text-[min(8vw,6vh)] text-center leading-none pb-2">
           Pokemon?
         </h1>
         <PokemonDisplay
-          className="w-[min(50vw,40vh)]"
+          className="w-[min(50vw,40vh)] flex justify-center"
           loading={loading}
           currentPokemon={currentPokemon}
           guessResult={guessResult}
@@ -55,7 +55,7 @@ function App() {
           className="size-[min(10vw,10vh)]"
         />
         <AnswerField
-          disabled={loading || imgLoading}
+          disabled={loading || imgLoading || guessResult !== null}
           guessResult={guessResult}
           answer={guess}
           setAnswer={setGuess}

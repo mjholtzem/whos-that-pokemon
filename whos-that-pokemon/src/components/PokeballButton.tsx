@@ -16,7 +16,7 @@ function PokeballButton({
     className={`active:scale-115 active:rotate-25 transition-transform ${spinning && "animate-spin"} ${className}`}
     onClick={onClick}
   >
-    <img src={pokeballUrl}></img>
+    <img className="size-full" src={pokeballUrl}></img>
   </button>;
 }
 
