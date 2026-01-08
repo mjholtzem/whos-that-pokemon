@@ -141,15 +141,15 @@ function App() {
           key="card"
           className="flex flex-col justify-center bg-white items-stretch gap-2 rounded-2xl shadow-2xl p-5 lg:p-20"
         >
-          <h1 className="font-black text-[min(5vw,5vh)] text-center">
+          <h1 className="font-black text-[min(8vw,6vh)] text-center">
             Who's That Pokémon?
           </h1>
           <div className="flex flex-col justify-center items-center">
             {/*(loading || imgLoading) && (
               <LoadingSpiral key={"loading-spiral"} size={64}></LoadingSpiral>
             )*/}
-            <div className={`flex flex-col justify-center items-center gap-4`}>
-              <div className="w-[min(50vw,50vh)]">
+            <div className={`flex flex-col justify-center items-center gap-3`}>
+              <div className="w-[min(50vw,40vh)]">
                 <TvContainer>
                   {/* Brightness Group */}
                   <div
