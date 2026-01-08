@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import LoadingSpiral from "./components/LoadingSpiral";
+/* import LoadingSpiral from "./components/LoadingSpiral"; */
 import type { Pokemon } from "./models/Pokemon";
 import TvContainer from "./components/TvContainer";
 import pokeballUrl from "./assets/pokeball.svg";
