@@ -1,4 +1,4 @@
-import pokeballUrl from "/pokeball.svg"
+import pokeballUrl from "/pokeball.svg";
 
 function PokeballButton({
   onClick,
@@ -11,13 +11,17 @@ function PokeballButton({
   disabled: boolean;
   className: string;
 }) {
-  return <button
-    disabled={disabled}
-    className={`active:scale-115 active:rotate-25 transition-transform ${spinning && "animate-spin"} ${className}`}
-    onClick={onClick}
-  >
-    <img className="size-full" src={pokeballUrl}></img>
-  </button>;
+  return (
+    <button
+      disabled={disabled}
+      className={`active:scale-115 active:rotate-25 transition-transform ${
+        spinning && "animate-spin"
+      } ${className}`}
+      onClick={onClick}
+    >
+      <img className="size-full" src={pokeballUrl}></img>
+    </button>
+  );
 }
 
 export default PokeballButton;

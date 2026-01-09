@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import type { Pokemon } from "../models/Pokemon";
-import { usePokemon, type PokemonContextValue } from "../contexts/PokemonContext";
+import {
+  usePokemon,
+  type PokemonContextValue,
+} from "../contexts/PokemonContext";
 
 const idMemoryLength = 10;
 
@@ -16,8 +19,7 @@ interface UseWhosThatPokemonReturn {
 }
 
 function useWhosThatPokemon(): UseWhosThatPokemonReturn {
-
-    const pokemonContext = usePokemon();
+  const pokemonContext = usePokemon();
 
   const [recentIds, setRecentIds] = useState<number[]>([]);
   const [currentPokemon, setCurrentPokemon] = useState<Pokemon | null>(null);
@@ -26,7 +28,7 @@ function useWhosThatPokemon(): UseWhosThatPokemonReturn {
   const [guessResult, setGuessResult] = useState<boolean | null>(null);
 
   useEffect(() => {
-    if(pokemonContext.loading) return;
+    if (pokemonContext.loading) return;
     fetchRandomPokemon();
   }, [pokemonContext.loading]);
 
@@ -41,8 +43,9 @@ function useWhosThatPokemon(): UseWhosThatPokemonReturn {
 
     let randomId: number;
     do {
-      randomId = Math.floor(Math.random() * pokemonContext.allPokemon.length-1);
-    
+      randomId = Math.floor(
+        Math.random() * pokemonContext.allPokemon.length - 1
+      );
     } while (recentIds.includes(randomId));
 
     //artifical load just because it's kind of fun to have anticipation
@@ -90,7 +93,7 @@ function useWhosThatPokemon(): UseWhosThatPokemonReturn {
     guessResult,
     fetchRandomPokemon,
     submitCurrentGuess,
-    pokemonContext
+    pokemonContext,
   };
 }
 

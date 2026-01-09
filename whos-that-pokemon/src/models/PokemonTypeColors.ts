@@ -1,6 +1,6 @@
 export interface TypeColors {
-    bgColor: string;
-    textColor: string;
+  bgColor: string;
+  textColor: string;
 }
 
 export const PokemonTypeColors: Record<string, TypeColors> = {

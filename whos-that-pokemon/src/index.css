@@ -3,19 +3,19 @@
 @theme {
   --font-jersey-15: "Jersey 15", sans-serif;
 
-  --animate-fade-in: fade-in .25s ease-in-out forwards;
+  --animate-fade-in: fade-in 0.25s ease-in-out forwards;
   @keyframes fade-in {
-   0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }
 
-
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -24,8 +24,8 @@ html, body {
 
 /* React root */
 #root {
-  height: 100dvh;      /* dynamic viewport height */
+  height: 100dvh; /* dynamic viewport height */
   width: 100%;
-  overflow: hidden;   /* prevent accidental page scrolling */
+  overflow: hidden; /* prevent accidental page scrolling */
   display: flex;
 }

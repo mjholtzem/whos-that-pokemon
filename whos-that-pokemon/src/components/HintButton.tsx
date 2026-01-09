@@ -1,7 +1,15 @@
 import type { Pokemon } from "../models/Pokemon";
 import { capitalizeWords } from "../utils/stringUtils";
 
-function HintButton({className, onClick, pokemon}: {className?: string, onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void, pokemon: Pokemon}) {
+function HintButton({
+  className,
+  onClick,
+  pokemon,
+}: {
+  className?: string;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  pokemon: Pokemon;
+}) {
   return (
     <button
       key={pokemon.name}

@@ -2,12 +2,12 @@ import { usePokemon } from "../contexts/PokemonContext";
 import HintButton from "./HintButton";
 
 function HintRow({
-    className,
+  className,
   guess,
   setGuess,
   submitCurrentGuess,
 }: {
-    className?: string;
+  className?: string;
   guess: string;
   setGuess: (value: React.SetStateAction<string>) => void;
   submitCurrentGuess: (guess: string) => void;

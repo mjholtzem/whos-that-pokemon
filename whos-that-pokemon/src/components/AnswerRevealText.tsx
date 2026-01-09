@@ -5,7 +5,7 @@ function AnswerRevealText({
   currentPokemon,
   guessResult,
   loading,
-  className
+  className,
 }: {
   currentPokemon: Pokemon | null;
   guessResult: boolean | null;
