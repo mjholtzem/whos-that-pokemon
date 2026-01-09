@@ -1,4 +1,4 @@
-import pokeballUrl from "../assets/pokeball.svg";
+import pokeballUrl from "/pokeball.svg"
 
 function PokeballButton({
   onClick,
