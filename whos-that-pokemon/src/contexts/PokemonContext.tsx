@@ -15,11 +15,9 @@ export interface PokemonContextValue {
   search: (searchValue: string) => Pokemon[];
 }
 
-const PokemonContext = createContext<PokemonContextValue>({
-  allPokemon: [],
-  loading: true,
-  search: (_searchValue => []),
-});
+const PokemonContext = createContext<PokemonContextValue | undefined>(
+  undefined
+);
 
 interface PokemonProviderProps {
   children: ReactNode;
@@ -85,6 +83,9 @@ export const PokemonProvider = ({ children }: PokemonProviderProps) => {
   );
 };
 
-export function usePokemon() {
-  return useContext(PokemonContext);
+export function usePokemon(): PokemonContextValue {
+  const context = useContext(PokemonContext);
+  if (!context)
+    throw new error("'usePokemon must be used within PokemonProvider");
+  return context;
 }
