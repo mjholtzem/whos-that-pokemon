@@ -64,6 +64,7 @@ function App() {
         />
         <div className="h-[min(12vw,12vh)] w-[min(55vw,55vh)] flex flex-col justify-center items-center">
           <HintRow
+            className={`${guessResult !== null && "hidden"}`}
             guess={guess}
             setGuess={setGuess}
             submitCurrentGuess={submitCurrentGuess}

@@ -2,10 +2,12 @@ import { usePokemon } from "../contexts/PokemonContext";
 import HintButton from "./HintButton";
 
 function HintRow({
+    className,
   guess,
   setGuess,
   submitCurrentGuess,
 }: {
+    className?: string;
   guess: string;
   setGuess: (value: React.SetStateAction<string>) => void;
   submitCurrentGuess: (guess: string) => void;
@@ -14,7 +16,7 @@ function HintRow({
   return (
     <div
       id="hintRow"
-      className={`flex flex-row gap-2 flex-wrap w-full justify-center items-center`}
+      className={`${className} flex flex-row gap-2 flex-wrap w-full justify-center items-center`}
     >
       {pokemonContext
         .search(guess)
