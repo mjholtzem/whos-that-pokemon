@@ -4,6 +4,7 @@ import PokeballButton from "./components/PokeballButton";
 import AnswerField from "./components/AnswerField";
 import PokemonDisplay from "./components/PokemonDisplay";
 import AnswerRevealText from "./components/AnswerRevealText";
+import HintRow from "./components/HintRow";
 
 function App() {
   const {
@@ -34,7 +35,7 @@ function App() {
 
   return (
     <div className="font-jersey-15 pb-[calc(env(safe-area-inset-bottom)+20px)] p-10 h-full w-full bg-gray-300 flex flex-col justify-center items-center min-h-0 min-w-0">
-      <div className="flex flex-col justify-center bg-white items-center gap-2 rounded-2xl shadow-2xl p-5 lg:p-10">
+      <div className="flex flex-col justify-center bg-white items-center gap-2 rounded-2xl shadow-2xl p-10">
         <h1 className="font-roboto font-bold text-[min(6vw,4vh)] text-center leading-none">
           Who's That
         </h1>
@@ -61,12 +62,21 @@ function App() {
           setAnswer={setGuess}
           submitAnswer={() => submitCurrentGuess(guess)}
         />
-        <AnswerRevealText
-          className="font-bold text-center text-[min(4vw,4vh)]"
-          currentPokemon={currentPokemon}
-          guessResult={guessResult}
-          loading={loading}
-        />
+        <div className="h-[min(12vw,12vh)] w-[min(55vw,55vh)] flex flex-col justify-center items-center">
+          <HintRow
+            guess={guess}
+            setGuess={setGuess}
+            submitCurrentGuess={submitCurrentGuess}
+          ></HintRow>
+          <AnswerRevealText
+            className={`font-bold text-center text-[min(6vw,6vh)] ${
+              guessResult === null && "h-0"
+            } `}
+            currentPokemon={currentPokemon}
+            guessResult={guessResult}
+            loading={loading}
+          />
+        </div>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import type { Pokemon } from "../models/Pokemon";
+import { usePokemon, type PokemonContextValue } from "../contexts/PokemonContext";
 
 const idMemoryLength = 10;
 
@@ -11,14 +12,23 @@ interface UseWhosThatPokemonReturn {
   guessResult: boolean | null;
   fetchRandomPokemon: () => Promise<void>;
   submitCurrentGuess: (guess: string) => void;
+  pokemonContext: PokemonContextValue;
 }
 
 function useWhosThatPokemon(): UseWhosThatPokemonReturn {
+
+    const pokemonContext = usePokemon();
+
   const [recentIds, setRecentIds] = useState<number[]>([]);
   const [currentPokemon, setCurrentPokemon] = useState<Pokemon | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [imgLoading, setImgLoading] = useState<boolean>(true);
   const [guessResult, setGuessResult] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    if(pokemonContext.loading) return;
+    fetchRandomPokemon();
+  }, [pokemonContext.loading]);
 
   const resetStateVars = () => {
     setImgLoading(true);
@@ -31,18 +41,14 @@ function useWhosThatPokemon(): UseWhosThatPokemonReturn {
 
     let randomId: number;
     do {
-      randomId = Math.floor(Math.random() * 150) + 1;
+      randomId = Math.floor(Math.random() * pokemonContext.allPokemon.length-1);
     
     } while (recentIds.includes(randomId));
 
-    //fetch pokemon with a minimum delay
-    const [response] = await Promise.all([
-      fetch(`https://pokeapi.co/api/v2/pokemon/${randomId}`),
-      new Promise<void>((res) => setTimeout(res, 1000)),
-    ]);
+    //artifical load just because it's kind of fun to have anticipation
+    await new Promise<void>((res) => setTimeout(res, 2000));
 
-    const pokemonJson = await response.json();
-    const pokemon: Pokemon = pokemonJson as Pokemon;
+    const pokemon = pokemonContext.allPokemon[randomId];
 
     //Update Recent Ids
     setRecentIds((prev) => {
@@ -59,10 +65,6 @@ function useWhosThatPokemon(): UseWhosThatPokemonReturn {
 
     setLoading(false);
   };
-
-  useEffect(() => {
-    fetchRandomPokemon();
-  }, []);
 
   const submitCurrentGuess = (guess: string) => {
     if (guessResult != null) {
@@ -88,6 +90,7 @@ function useWhosThatPokemon(): UseWhosThatPokemonReturn {
     guessResult,
     fetchRandomPokemon,
     submitCurrentGuess,
+    pokemonContext
   };
 }
 

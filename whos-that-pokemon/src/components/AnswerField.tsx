@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 function AnswerField({
   disabled,
@@ -17,6 +17,10 @@ function AnswerField({
 }) {
   const inputRef = useRef<HTMLInputElement>(null);
 
+  useEffect(()=>{
+    if(guessResult !== null) inputRef.current?.blur();
+  }, [guessResult])
+
   return (
     <div
       className={`${className} p-[min(1vw,1vh)] rounded-[min(4vw,4vh)] ${
@@ -32,7 +36,6 @@ function AnswerField({
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          inputRef.current?.blur();
           submitAnswer();
         }}
         className="opacity-100 visible"

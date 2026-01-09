@@ -8,7 +8,7 @@ function TvContainer({ children }: { children: ReactNode }) {
   return (
     <div className="relative inline-block">
       <img src={tvUrl} alt="TV Frame" className="block"></img>
-      <div className="bg-slate-500 rounded-[5%] overflow-hidden absolute align-left align-top w-[61.8%] h-[62.4%] top-[15.55%] left-[10.3%] @container">
+      <div className="bg-slate-500 rounded-[5%] overflow-hidden absolute align-left align-top w-[61.8%] h-[62.4%] top-[15.55%] left-[10.2%] @container">
         <CRTEffect preset={"apple2"} enableGlow={true} glowColor="rgba(255, 255, 255, .75)" enableSweep={true} enableFlicker={true} flickerIntensity={"medium"} flickerSpeed={"medium"} enableGlitch={true} glitchSpeed={"medium"} glitchIntensity={"low"} theme={"blue"}>
           <div className="w-[100cqw] h-[67cqw] flex justify-center items-center">
             {children}
