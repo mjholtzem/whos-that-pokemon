@@ -19,7 +19,7 @@ function HintRow({
       className={`${className} flex flex-row gap-2 flex-wrap w-full justify-center items-center`}
     >
       {pokemonContext
-        .search(guess)
+        .search(guess.trim().length > 2 ? guess : "")
         .slice(0, 3)
         .map((searchResult) => {
           return (
